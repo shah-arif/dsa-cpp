@@ -9,21 +9,27 @@ int main(){
     int smallest = INT_MAX;
     int largest = INT_MIN;
 
+    int smallest_index = 0;
+    int largest_index = 0;
+
     for(int i = 0; i < length; i++){
         // v1
-        // if (nums[i] < smallest){
-        //     smallest = nums[i];
-        // }
-        // if (nums[i] > largest){
-        //     largest = nums[i];
-        // }
+        if (nums[i] < smallest){
+            smallest = nums[i];
+            smallest_index = i;
+        }
+        if (nums[i] > largest){
+            largest = nums[i];
+            largest_index = i;
+        }
 
         // v2
-        smallest = min(nums[i], smallest);
-        largest = max(nums[i], largest);
+        // with implicit function
+        // smallest = min(nums[i], smallest);
+        // largest = max(nums[i], largest);
     }
-    cout << "smallest: " << smallest << endl;
-    cout << "largest: " << largest << endl;
+    cout << "smallest: " << smallest << " index: " << smallest_index << endl;
+    cout << "largest: " << largest << " index: " << largest_index << endl;
     
     return 0;
 }
