@@ -18,7 +18,7 @@ int productOfArray(int array[], int size){
 }
 
 int main(){
-    int array[] = {1, 2, 3, 4, 4};
+    int array[] = {1, 2, 3, 4, 5};
     int size = sizeof(array) / sizeof(array[0]);
     int sum = sumOfArray(array, size);
     int product = productOfArray(array, size);
