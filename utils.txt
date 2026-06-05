@@ -1,1 +1,1 @@
-hello
+g++ algorithm/intersection_array.cpp -o code && ./code
